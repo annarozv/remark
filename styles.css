@@ -58,12 +58,12 @@ button {
 
 #gradient-container {
     position: relative;
-    height: 200px;
-    margin-bottom: 60px;
+    height: 300px;
+    margin-bottom: 70px;
 }
 
 #gradient-zone {
-    height: 200px;
+    height: 300px;
     background-color: rgb(119,120,83);
     background-image: radial-gradient(circle, rgba(119,120,83,1) 0%, rgba(9,27,49,1) 86%);
 }
@@ -104,6 +104,49 @@ button {
     background-color: #e1e1e1;
 }
 
+footer {
+    width: 100%;
+    height: 100px;
+    font-family: Raleway;
+    font-weight: 100;
+    font-size: 20px;
+    color: white;
+    background-color: #142534;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+}
+
+#footer-mobile {
+    display: none;
+    font-size: 16px;   
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.footer-block {
+    vertical-align: middle;
+    margin-top: 20px;
+}
+
+.footer-block:first-of-type {
+    margin-left: 40px;
+}
+
+#year {
+    position: relative;
+    font-size: 25px;
+    left: 30%;
+}
+
+#year-mobile {
+    font-size: 18px;
+}
+
+.footer-block:last-of-type {
+    margin-left: auto;
+    margin-right: 40px;
+}
 
 /* the responsive part */
 
@@ -116,6 +159,10 @@ button {
         width: 600px;    
         margin-left: -300px;
         margin-top: -42px;
+    }
+
+    #year {
+        left: 20%;
     }
 }
 
@@ -130,9 +177,17 @@ button {
         margin-left: -250px;
         margin-top: -36px;
     }
+
+    #year {
+        left: 10%;
+    }
 }
 
 @media screen and (max-width: 500px) {
+    .container {
+        --bs-gutter-x: 0 !important;
+    }
+
     #remark {
         left: 15%;
     }
@@ -142,6 +197,14 @@ button {
         width: 300px;    
         margin-left: -150px;
         margin-top: -55px;
+    }
+
+    .footer-block {
+        display: none;
+    }
+
+    #footer-mobile {
+        display: block;
     }
 }
 
@@ -161,6 +224,10 @@ button {
     #remark {
         left: 10%;
     }
+    
+    #logo {
+        margin-left: 10px;
+    }    
 }
 
 
