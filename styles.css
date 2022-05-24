@@ -23,8 +23,7 @@ button {
     position: static;
     width: 100%;
     height: 100px;
-    padding: 10px;
-    
+    padding: 10px;    
 }
 
 .header-block {
@@ -91,7 +90,9 @@ button {
 
 .section {
     position: relative;
+    margin-bottom: 45px;
 }
+
 
 .hero-image {
     max-width: 100%;
@@ -110,25 +111,62 @@ button {
     font-weight: 300;
     text-transform: uppercase;
     position: absolute;
+    line-height: 1.3em;
 }
 
-#hero-introduction {
+
+.hero-content-wrapper {
+    position: relative;
+}
+
+/* individual styling for hero titles */
+
+#hero-introduction, #hero-idea, #hero-remote {
     left: 50px;
     top: 35px;
+}
+
+#hero-route, #hero-people {
+    text-align: right;
+    right: 0;
+    right: 50px;
+    top: 35px;
+}
+
+#hero-languages { 
+    width: 600px;   
+    left: 50%;
+    margin-left: -300px;
+    text-align: center;
+    top: 15%;
+}
+
+#hero-future {
+    font-size: 100px;
+    font-weight: 200;
+    color: white; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
   
 .section-content {
     display: none;
     overflow: hidden;
-    background-color: #e1e1e1;
+    background-color: #dfe1de;
     font-family: Raleway;
     font-size: 20px;
     font-weight: 300;
     padding: 20px;
+    padding-left: 30px;
 }
 
 .section-content p {
     margin-bottom: 10px;
+}
+
+.section-content p:first-of-type {
+    margin-top: 8px;
 }
 
 footer {
@@ -177,13 +215,27 @@ footer {
 
 /* the responsive part */
 
+@media screen and (min-width: 1200px) {    
+    .container {
+        max-width: 80% !important;
+    }
+}
+
 @media screen and (max-width: 1400px) {
+    #hero-introduction, #hero-idea, #hero-route, #hero-remote, #hero-people, #hero-languages {
+        font-size: 60px;
+    }
+
     #year {
         left: 30%;
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 990px) {
+    .container {
+        min-width: 90%;
+    }
+
     #remark {
         left: 25%;
     }
@@ -196,18 +248,39 @@ footer {
     
     #gradient-container {
         height: 200px;
+        margin-bottom: 45px;
     }
 
     #gradient-zone {
         height: 200px;
     }
 
-    .hero-text {
-        font-size: 50px;
+    #hero-introduction, #hero-idea, #hero-remote {
+        font-size: 40px;
+        top: 20px;
+        left: 30px; 
+    }   
+
+    #hero-route, #hero-people {
+        font-size: 40px;
+        top: 20px;
+        right: 30px;
+    }
+    
+    #hero-languages {
+        font-size: 40px;
+    }
+
+    #hero-future {
+        font-size: 80px;
     }
 
     #year {
         left: 20%;
+    }
+
+    footer {        
+        margin-top: 45px;
     }
 
     .footer-block:first-of-type {
@@ -231,20 +304,63 @@ footer {
         margin-top: -36px;
     }
 
-    #hero-introduction {
-        left: 30px;
-        top: 20px;
+    #hero-introduction, #hero-remote {
+        font-size: 35px;
+        left: 25px;
     }
+
+    #hero-idea {
+        font-size: 30px;
+        left: 25px;
+    }
+
+    #hero-route, #hero-people {
+        font-size: 30px;
+        right: 25px;
+    }
+
+    #hero-languages {
+        top: 12%
+    }
+
+    #hero-future {
+        font-size: 70px;
+    }
+
+    .section {
+        margin-bottom: 32px;
+    }
+
+    .section-content {
+        font-size: 17px;
+        padding: 15px;
+    }
+
+    .section-content p {
+        margin-bottom: 6px;
+    }
+    
+    .section-content p:first-of-type {
+        margin-top: 0;
+    } 
+    
+    .section-content p:last-of-type {
+        margin-bottom: 0;
+    } 
 
     #year {
         left: 10%;
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     .container {
         --bs-gutter-x: 0 !important;
     }
+    
+    #logo {
+        margin-left: 10px;
+    }    
 
     #remark {
         left: 15%;
@@ -261,6 +377,14 @@ footer {
         font-size: 40px;
     }
 
+    #hero-languages {
+        font-size: 35px;
+    }
+
+    #hero-future {
+        font-size: 50px;
+    }
+
     .footer-block {
         display: none;
     }
@@ -270,7 +394,28 @@ footer {
     }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) { 
+    #hero-introduction, #hero-remote {
+        font-size: 30px;
+        left: 15px;
+    }
+
+    #hero-idea {
+        font-size: 25px;
+        left: 15px;
+    }
+
+    #hero-route, #hero-people {
+        font-size: 25px;
+        right: 15px;
+    }
+
+    #hero-languages {
+        font-size: 30px;
+    }
+ }
+
+@media screen and (max-width: 420px) {    
     #remark {
         font-size: 25px;
         left: 10%;
@@ -280,16 +425,10 @@ footer {
         margin-top: 25px;
         font-size: 20px;
     }
-}
 
-@media screen and (max-width: 415px) {
-    #remark {
-        left: 10%;
+    .hero-text {
+        font-size: 28px;
     }
-    
-    #logo {
-        margin-left: 10px;
-    }    
 }
 
 
