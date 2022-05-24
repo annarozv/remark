@@ -9,6 +9,10 @@
     src: url('Fonts/Raleway.ttf');
 }
 
+* {
+    -webkit-font-smoothing: antialiased;
+}
+
 /* remove all the decoration for the button */
 button {
     all: unset;
@@ -41,7 +45,7 @@ button {
     left: 35%;
     position: relative;
     vertical-align: middle;
-    padding-top: 5px;   
+    padding-top: 10px;   
 }
 
 #languageSwitcher {
@@ -85,11 +89,13 @@ button {
     z-index: 5;
 }
 
+.section {
+    position: relative;
+}
 
 .hero-image {
     max-width: 100%;
 }
-
 
 .hero-button {
     cursor: pointer;
@@ -97,11 +103,32 @@ button {
     border: none;
     outline: none;
 }
+
+.hero-text {
+    font-family: Raleway;
+    font-size: 70px;
+    font-weight: 300;
+    text-transform: uppercase;
+    position: absolute;
+}
+
+#hero-introduction {
+    left: 50px;
+    top: 35px;
+}
   
 .section-content {
     display: none;
     overflow: hidden;
     background-color: #e1e1e1;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px;
+}
+
+.section-content p {
+    margin-bottom: 10px;
 }
 
 footer {
@@ -130,13 +157,13 @@ footer {
 }
 
 .footer-block:first-of-type {
-    margin-left: 40px;
+    margin-left: 60px;
 }
 
 #year {
     position: relative;
     font-size: 25px;
-    left: 30%;
+    left: 35%;
 }
 
 #year-mobile {
@@ -145,10 +172,16 @@ footer {
 
 .footer-block:last-of-type {
     margin-left: auto;
-    margin-right: 40px;
+    margin-right: 60px;
 }
 
 /* the responsive part */
+
+@media screen and (max-width: 1400px) {
+    #year {
+        left: 30%;
+    }
+}
 
 @media screen and (max-width: 900px) {
     #remark {
@@ -160,9 +193,29 @@ footer {
         margin-left: -300px;
         margin-top: -42px;
     }
+    
+    #gradient-container {
+        height: 200px;
+    }
+
+    #gradient-zone {
+        height: 200px;
+    }
+
+    .hero-text {
+        font-size: 50px;
+    }
 
     #year {
         left: 20%;
+    }
+
+    .footer-block:first-of-type {
+        margin-left: 40px;
+    }
+
+    .footer-block:last-of-type {
+        margin-right: 40px;
     }
 }
 
@@ -176,6 +229,11 @@ footer {
         width: 500px;    
         margin-left: -250px;
         margin-top: -36px;
+    }
+
+    #hero-introduction {
+        left: 30px;
+        top: 20px;
     }
 
     #year {
@@ -197,6 +255,10 @@ footer {
         width: 300px;    
         margin-left: -150px;
         margin-top: -55px;
+    }
+
+    .hero-text {
+        font-size: 40px;
     }
 
     .footer-block {
