@@ -1,4 +1,4 @@
-/** handling opening an collapsing sections */
+/** handling opening and collapsing sections */
 let heroButtons = document.getElementsByClassName("hero-button");
 
 for (let i = 0; i < heroButtons.length; i++) {
@@ -14,12 +14,39 @@ for (let i = 0; i < heroButtons.length; i++) {
     });
 }
 
-/** hide all english texts in the beginning */
-let engTexts = document.querySelectorAll('.eng');
+/* function for obtaining the cookie value */
+function getCookie(cookieName) {
+    let cookie = {};
+    document.cookie.split(';').forEach(function(el) {
+      let [key,value] = el.split('=');
+      cookie[key.trim()] = value;
+    })
+    return cookie[cookieName];
+}
 
-engTexts.forEach(elem => {
-    elem.style.display = "none";
-});
+/* check what language was set */
+let lang = getCookie("language");
+let buttonInTheStart = document.getElementById("languageSwitcher");
+
+if (lang === "eng") {
+    let hideableTexts = document.querySelectorAll('.lv');
+
+    hideableTexts.forEach(elem => {
+        elem.style.display = "none";
+    });
+
+    buttonInTheStart.value = "LV";
+    buttonInTheStart.innerHTML = "LV";   
+} else {
+    let hideableTexts = document.querySelectorAll('.eng');
+
+    hideableTexts.forEach(elem => {
+        elem.style.display = "none";
+    });
+
+    buttonInTheStart.value = "ENG";
+    buttonInTheStart.innerHTML = "ENG"; 
+}
 
 /** function for toggling languages */
 function switchLang() {
@@ -40,7 +67,10 @@ function switchLang() {
 
         // change button text to latvian
         button.value = "LV";
-        button.innerHTML = "LV";         
+        button.innerHTML = "LV";   
+        
+        //set the cookie
+        document.cookie = "language=eng;" + "SameSite=None; Secure";
     } else {
         // hide english texts and unhide latvian        
         engTexts.forEach(elem => {
@@ -53,6 +83,9 @@ function switchLang() {
 
         // change button text to english
         button.value = "ENG";
-        button.innerHTML = "ENG";   
+        button.innerHTML = "ENG";  
+        
+        //set the cookie
+        document.cookie = "language=lv;" + "SameSite=None; Secure";
     }
 }
