@@ -19,6 +19,10 @@ button {
     cursor: pointer;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 #header {
     position: static;
     width: 100%;
@@ -292,7 +296,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 650px) {    
     #remark {
         left: 20%;
     }
@@ -428,6 +432,22 @@ footer {
 
     .hero-text {
         font-size: 28px;
+    }
+
+    #hero-introduction, #hero-idea, #hero-route, #hero-remote, #hero-people{
+        top: 13px;
+    }
+
+    #hero-people {
+        font-size: 23px;
+    }
+
+    #hero-introduction, #hero-remote, #hero-languages {
+        font-size: 25px;
+    }
+
+    #hero-future {
+        font-size: 40px;
     }
 }
 
