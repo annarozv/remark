@@ -5,14 +5,8 @@
 }
 
 @font-face {
-    font-family: Raleway;
+    font-family: "Raleway script=latin rev=1";
     src: url('Fonts/Raleway.ttf');
-}
-
-
-/* try fixing problems with fonts in chrome (does not work) */
-* {
-    -webkit-font-smoothing: antialiased;
 }
 
 /* remove all the decoration for the button */
@@ -230,9 +224,27 @@ footer {
 
 /* the responsive part */
 
+
 @media screen and (min-width: 1200px) {    
     .container {
         max-width: 80% !important;
+    }
+
+    #title {
+        font-size: 43px;
+    }
+}
+
+@media screen and (min-width: 1450px) {    
+    .container {
+        max-width: 77% !important;
+    }
+}
+
+
+@media screen and (min-width: 1550px) {    
+    .container {
+        max-width: 72% !important;
     }
 }
 
