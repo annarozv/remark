@@ -9,6 +9,8 @@
     src: url('Fonts/Raleway.ttf');
 }
 
+
+/* try fixing problems with fonts in chrome (does not work) */
 * {
     -webkit-font-smoothing: antialiased;
 }
@@ -19,15 +21,21 @@ button {
     cursor: pointer;
 }
 
-body {
+/* fix problems with overflow on mobile */
+html, body {
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 #header {
     position: static;
     width: 100%;
     height: 100px;
-    padding: 10px;    
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
 }
 
 .header-block {
@@ -38,29 +46,29 @@ body {
 #logo {
     width: 80px;
     margin-left: 20px;
-    margin-top: 5px;
+    position: relative;
+    float: left;
 }
 
 #remark {
     font-size: 30px;
     font-weight: 900;
     letter-spacing: .1rem;
-    left: 35%;
-    position: relative;
-    vertical-align: middle;
-    padding-top: 10px;   
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #languageSwitcher {
     font-size: 25px;
     font-weight: 200;
-    margin-top: 20px;
 }
 
 .header-block:last-of-type {    
     float: right;
     margin-right: 20px;
     position: relative;
+    align-self: center;
 }
 
 #gradient-container {
@@ -203,9 +211,10 @@ footer {
 }
 
 #year {
-    position: relative;
     font-size: 25px;
-    left: 35%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #year-mobile {
@@ -229,19 +238,11 @@ footer {
     #hero-introduction, #hero-idea, #hero-route, #hero-remote, #hero-people, #hero-languages {
         font-size: 60px;
     }
-
-    #year {
-        left: 30%;
-    }
 }
 
 @media screen and (max-width: 990px) {
     .container {
         min-width: 90%;
-    }
-
-    #remark {
-        left: 25%;
     }
 
     #title {
@@ -279,10 +280,6 @@ footer {
         font-size: 80px;
     }
 
-    #year {
-        left: 20%;
-    }
-
     footer {        
         margin-top: 45px;
     }
@@ -297,10 +294,6 @@ footer {
 }
 
 @media screen and (max-width: 650px) {    
-    #remark {
-        left: 20%;
-    }
-
     #title {
         font-size: 34px;
         width: 500px;    
@@ -351,10 +344,6 @@ footer {
     .section-content p:last-of-type {
         margin-bottom: 0;
     } 
-
-    #year {
-        left: 10%;
-    }
 }
 
 @media screen and (max-width: 550px) {
@@ -364,11 +353,7 @@ footer {
     
     #logo {
         margin-left: 10px;
-    }    
-
-    #remark {
-        left: 15%;
-    }
+    }  
 
     #title {
         font-size: 34px;
@@ -399,6 +384,12 @@ footer {
 }
 
 @media screen and (max-width: 450px) { 
+    #remark {
+        position: relative;
+        left: 0;
+        transform: translateX(0);
+    }    
+    
     #hero-introduction, #hero-remote {
         font-size: 30px;
         left: 15px;
@@ -422,11 +413,9 @@ footer {
 @media screen and (max-width: 420px) {    
     #remark {
         font-size: 25px;
-        left: 10%;
     }    
     
     #languageSwitcher {
-        margin-top: 25px;
         font-size: 20px;
     }
 
@@ -453,10 +442,6 @@ footer {
 
 
 @media screen and (max-width: 350px) {
-    #remark {
-        left: 7%;
-    }    
-
     #logo {
         margin-left: 5px;
     }    
