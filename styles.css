@@ -62,6 +62,8 @@ html, body {
 #languageSwitcher {
     font-size: 25px;
     font-weight: 200;
+    width: 60px;
+    text-align: center;
 }
 
 .header-block:last-of-type {    
@@ -417,6 +419,7 @@ footer {
     
     #languageSwitcher {
         font-size: 20px;
+        width: 48px;
     }
 
     .hero-text {
