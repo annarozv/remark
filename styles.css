@@ -9,6 +9,11 @@
     src: url('Fonts/Raleway.ttf');
 }
 
+* {
+    -webkit-font-smoothing: antialiased;
+    font-synthesis: none;
+}
+
 /* remove all the decoration for the button */
 button {
     all: unset;
@@ -426,7 +431,8 @@ footer {
 
 @media screen and (max-width: 420px) {    
     #remark {
-        font-size: 25px;
+        font-size: 25px;        
+        letter-spacing: 0rem;
     }    
     
     #languageSwitcher {
