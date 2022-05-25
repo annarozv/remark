@@ -3,7 +3,6 @@ let heroButtons = document.getElementsByClassName("hero-button");
 
 for (let i = 0; i < heroButtons.length; i++) {
     heroButtons[i].addEventListener("click", function() {
-        this.classList.toggle("active");
         let content = this.nextElementSibling;
 
         if (content.style.display === "block") {
@@ -17,10 +16,12 @@ for (let i = 0; i < heroButtons.length; i++) {
 /* function for obtaining the cookie value */
 function getCookie(cookieName) {
     let cookie = {};
+
     document.cookie.split(';').forEach(function(el) {
       let [key,value] = el.split('=');
       cookie[key.trim()] = value;
     })
+
     return cookie[cookieName];
 }
 
