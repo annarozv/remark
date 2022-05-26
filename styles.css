@@ -1,18 +1,17 @@
 /* add fonts */
 @font-face {
-    font-family: Radio Canada;
+    font-family: "Radio Canada";
     src: url('Fonts/RadioCanada.ttf');
 }
 
-/* @font-face {
+@font-face {
     font-family: "Raleway script=latin rev=1";
-    font-family: Raleway;
-    src:    url('Fonts/Raleway.woff2') format("woff2"),
-            url('Fonts/Raleway.ttf') format("truetype"),
-            url('Fonts/Raleway.woff') format("woff"),
-            url('Fonts/Raleway.eot') format("embedded-opentype"),
-            url('Fonts/Raleway.otf') format("opentype");  
-} */
+    src:    url("Fonts/Raleway.woff2") format("woff2"),
+            url("Fonts/Raleway.woff") format("woff"),
+            url("Fonts/Raleway.ttf") format("truetype"),
+            url("Fonts/Raleway.eot") format("embedded-opentype"),
+            url("Fonts/Raleway.otf") format("opentype");  
+}
 
 * {
     -webkit-font-smoothing: antialiased;
