@@ -20,16 +20,6 @@
 }
 
 @font-face {
-    font-family: Raleway-Regular;
-    src: url(Fonts/Raleway-Regular.ttf);
-}
-
-@font-face {
-    font-family: Raleway-Semibold;
-    src: url(Fonts/Raleway-Semibold.ttf);
-}
-
-@font-face {
     font-family: Raleway-Black;
     src: url(Fonts/Raleway-Black.ttf);
 }
@@ -202,11 +192,6 @@ html, body {
 
 .section-content p:first-of-type {
     margin-top: 8px;
-    font-family: Raleway-Semibold;
-}
-
-.intro-first-paragraph {    
-    font-family: Raleway-Semibold;
 }
 
 footer {
